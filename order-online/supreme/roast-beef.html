@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap" rel="stylesheet">
+    <title>Order Roast Beef | Dell Street Deli</title>
+    <meta name="description" content="Customize and order the Dell Street Deli Roast Beef SUPREME sandwich for pickup in Syracuse, NY." />
+    <link rel="stylesheet" href="../../style.css" />
+    <link rel="stylesheet" href="supreme-template.css" />
+  </head>
+  <body>
+    <header id="home">
+      <section class="header-top">
+        <h1 hidden>Dell Street Deli</h1>
+      </section>
+      <section class="header-brand">
+        <a href="../../index.html" aria-label="Dell Street Deli home">
+          <img src="../../photos/logo_clear.png" alt="Dell Street Deli Logo" />
+        </a>
+      </section>
+      <section class="header-bottom">
+        <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+          <a href="../../index.html#home">Home</a>
+          <a href="../../index.html#menu">Menu</a>
+        </nav>
+        <h2 id="syracuse">Syracuse, NY</h2>
+        <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+          <a href="../../index.html#sides">Sides</a>
+          <a href="../../index.html#about">About</a>
+          <a class="nav-order-link" href="https://order.dellstdeli.com/" target="_blank" rel="noopener">Checkout</a>
+        </nav>
+      </section>
+    </header>
+
+    <main>
+      <section class="product-page" aria-labelledby="roast-beef-heading">
+<article class="product-copy">
+          <p class="product-eyebrow">Supreme Sandwich</p>
+          <h1 id="roast-beef-heading">Roast Beef</h1>
+          <p class="lead">House specialty roast beef, locally sourced from Rosenkrans Farm and prepared by the chefs of Touché.</p>
+          <div class="product-meta" aria-label="Roast Beef sandwich details">
+            <span class="product-pill">Dell St. Horseradish Cream</span>
+            <span class="product-pill">White Cheddar</span>
+            <span class="product-pill">Red Onion</span>
+            <span class="product-pill">Di Lauro's Round Roll</span>
+          </div>
+
+          <section class="build-card" aria-labelledby="customize-heading">
+            <h2 id="customize-heading">Roast Beef - Optional $4 SUPREME Upgrade</h2>
+            <form class="order-form" action="https://order.dellstdeli.com/" method="get" target="_blank">
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="bread">Bread</label>
+                  <select id="bread" name="bread">
+                    <option selected>Round Roll</option>
+                    <option>Light Rye</option>
+                    <option>Whole Wheat</option>
+                    <option>White Loaf</option>
+                    <option>Mini-Split Italian</option>
+                  </select>
+                </div>
+                <div class="form-field">
+                  <label for="cheese">Cheese</label>
+                  <select id="cheese" name="cheese">
+                    <option selected>White Cheddar</option>
+                    <option>Mild Provolone</option>
+                    <option>Spicy PepperJack</option>
+                    <option>Swiss Gruyere</option>
+                    <option>American</option>
+                    <option>No Cheese</option> 
+                  </select>
+                </div>
+              </div>
+
+              <fieldset class="choice-group">
+                <legend>Toppings</legend>
+                <div class="choice-list">
+                  <label><input type="checkbox" name="toppings" value="red-onion" checked>Red Onion</label>
+                  <label><input type="checkbox" name="toppings" value="lettuce">Lettuce</label>
+                  <label><input type="checkbox" name="toppings" value="tomato">Tomato</label>
+                  <label><input type="checkbox" name="toppings" value="pickles"> Pickles</label>
+                </div>
+              </fieldset>
+
+              <fieldset class="choice-group">
+                <legend>Condiments & Extras</legend>
+                <div class="choice-list">
+                  <label><input type="checkbox" name="extras" value="horseradish-cream" checked>Horseradish Cream</label>
+                  <label><input type="checkbox" name="extras" value="supreme">SUPREME Upgrade +$4</label>
+                  <label><input type="checkbox" name="extras" value="extra-cheese">Extra Cheese +$1.50</label>
+                  <label><input type="checkbox" name="extras" value="XXX">XXX Horseradish +$1.50</label>
+                </div>
+              </fieldset>
+
+              <div class="form-grid">
+                <div class="form-field">
+                  <label for="quantity">Quantity</label>
+                  <input id="quantity" type="number" name="quantity" min="1" value="1" />
+                </div>
+                <div class="form-field">
+                  <label for="pickup-name">Pickup Name</label>
+                  <input id="pickup-name" type="text" name="pickup-name" autocomplete="name" />
+                </div>
+              </div>
+
+              <div class="form-field">
+                <label for="notes">Order Notes</label>
+                <textarea id="notes" name="notes" placeholder="Add any special instructions here."></textarea>
+              </div>
+
+              <div class="form-actions">
+                <button class="button button-primary" type="submit">Continue to Checkout</button>
+                <a class="button button-outline" href="tel:+13153998809">Call (315) 399-8809</a>
+              </div>
+              <p class="form-note">Final pickup checkout opens through Dell Street Deli's online ordering partner.</p>
+            </form>
+          </section>
+        </article>
+      </section>
+    </main>
+
+    <footer>
+      <section class="footer-left">
+        <a href="../../index.html" aria-label="Dell Street Deli home">
+          <img src="../../photos/logo_clear.png" alt="Dell Street Deli Logo" />
+        </a>
+      </section>
+      <section class="footer-center">
+        <article id="copyright">© 2026 Dell Street Deli. All rights reserved.</article>
+        <article id="porter"><h6>Porter Rules!</h6></article>
+      </section>
+      <section class="footer-right">
+        <h4>Mon — Sat:<br>
+        11AM — 5:30PM<br>
+        120 Dell St. Syracuse, NY<br>
+        <a class="footer-order-link" href="https://order.dellstdeli.com/" target="_blank" rel="noopener">Order Online</a></h4>
+      </section>
+    </footer>
+  </body>
+</html>

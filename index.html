@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <header>
+    <header id="home">
       <section class="header-top">
         <h1 hidden>Dell Street Deli</h1>
       </section>
@@ -20,7 +20,16 @@
         <img src="photos/logo_clear.png" alt="Dell Street Deli Logo" />
       </section>
       <section class="header-bottom">
+        <nav class="header-nav header-nav-left" aria-label="Primary navigation left">
+          <a href="#home">Home</a>
+          <a href="#menu">Menu</a>
+        </nav>
         <h2 id="syracuse">Syracuse, NY</h2>
+        <nav class="header-nav header-nav-right" aria-label="Primary navigation right">
+          <a href="#sides">Sides</a>
+          <a href="#about">About</a>
+          <a class="nav-order-link" href="#menu">Order Online</a>
+        </nav>
       </section>
     </header>
     <main>
@@ -42,9 +51,25 @@
             At Dell Street Deli, we partner with local farmers and small-batch producers to bring you the purest flavors of the Upstate Region. Our commitment to specialty meats and hand-selected ingredients
             ensures every sandwich is a masterpiece made with care and served with pride.</h3>
           </div>
+          <div id="hero-actions">
+            <a class="button button-primary" href="https://order.dellstdeli.com/" target="_blank" rel="noopener">Order Online</a>
+            <a class="button button-secondary" href="#menu">View Menu</a>
+          </div>
         </article>
       </section>
-      <section class="menu">
+      <!-- <section class="order-online" id="order">
+        <article class="order-card">
+          <div class="order-copy">
+            <h2 id="order-title">Order Dell Street Deli online</h2>
+            <p>Build your sandwich, add salads, sides, and drinks, then send your pickup order straight to the deli.</p>
+          </div>
+          <div class="order-actions">
+            <a class="button button-primary" href="https://order.dellstdeli.com/" target="_blank" rel="noopener">Start Order</a>
+            <a class="button button-outline" href="tel:+13153998809">Call (315) 399-8809</a>
+          </div>
+        </article>
+      </section> -->
+      <section class="menu" id="menu">
           <article id="supreme" class="menu-section">
             <section class="menu-heading">
               <h2>Supreme</h2>
@@ -53,10 +78,28 @@
               <h3>Upgrade to our house specialty meats for $4</h3>
               <h4>Locally sourced meat from Rosenkrans Farm, and prepared by the chefs of Touché</h4>
             </section>
-            <ul id="items">
-              <li><img src="photos/food/roast_beef.png" alt="Roast Beef"></li>
-              <li><img src="photos/food/corned_beef.png" alt="Corner Beef"></li>
-              <li><img src="photos/food/pastrami.png" alt="Pastrami"></li>
+            <ul class="items">
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="roast-beef-title" class="visually-hidden">Roast Beef</h3>
+                  <img src="photos/food/roast_beef.png" alt="Roast Beef">
+                  <a class="button button-primary menu-order-button" href="order-online/supreme/roast-beef.html" aria-label="Order Roast Beef Online">Order Online</a>
+                </article>
+              </li>
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="corned-beef-title" class="visually-hidden">Corned Beef</h3>
+                  <img src="photos/food/corned_beef.png" alt="Corned Beef">
+                  <a class="button button-primary menu-order-button" href="order-online/supreme/corned-beef.html" aria-label="Order Corned Beef Online">Order Online</a>
+                </article>
+              </li>
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="pastrami-title" class="visually-hidden">Pastrami</h3>
+                  <img src="photos/food/pastrami.png" alt="Pastrami">
+                  <a class="button button-primary menu-order-button" href="order-online/supreme/pastrami.html" aria-label="Order Pastrami Online">Order Online</a>
+                </article>
+              </li>
             </ul>
           </article>
           <article id="seasonal" class="menu-section">
@@ -66,10 +109,28 @@
             <section class="menu-subheading">
               <h3>Our seasonal menu features the freshest ingredients and flavors</h3>
             </section>
-            <ul id="items">
-              <li><img src="photos/food/very_veggie.png" alt="Very Veggie"></li>
-              <li><img src="photos/food/turkey.png" alt="Turkey"></li>
-              <li><img src="photos/food/italian.png" alt="Italian"></li>
+            <ul class="items">
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="very-veggie-title" class="visually-hidden">Very Veggie</h3>
+                  <img src="photos/food/very_veggie.png" alt="Very Veggie">
+                  <a class="button button-primary menu-order-button" href="order-online/seasonal/very-veggie.html" aria-label="Order Very Veggie Online">Order Online</a>
+                </article>
+              </li>
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="turkey-title" class="visually-hidden">Turkey</h3>
+                  <img src="photos/food/turkey.png" alt="Turkey">
+                  <a class="button button-primary menu-order-button" href="order-online/seasonal/turkey.html" aria-label="Order Seasonal Turkey Online">Order Online</a>
+                </article>
+              </li>
+               <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="italian-title" class="visually-hidden">Italian</h3>
+                  <img src="photos/food/italian.png" alt="Italian">
+                  <a class="button button-primary menu-order-button" href="order-online/seasonal/italian.html" aria-label="Order Seasonal Italian Online">Order Online</a>
+                </article>
+              </li>
             </ul>
           </article>
           <article id="sides" class="menu-section">
@@ -77,16 +138,22 @@
               <h2>Salad/Sides/Drinks</h2>
             </section>
             <section class="menu-subheading">
-              <h3>Complement your sandwich with our selection of fresh sides.</h3>
+              <h3>Complement your sandwich with our Daily Selection of fresh sides.</h3>
             </section>
-            <ul id="items">
-              <li><img src="photos/food/salad.png" alt="Salad"></li>
+            <ul class="items">
+              <li class="menu-item menu-item-order">
+                <article class="menu-order-card">
+                  <h3 id="salad-title" class="visually-hidden">Seasonal Salad</h3>
+                  <img src="photos/food/salad.png" alt="Seasonal Salad">
+                  <a class="button button-primary menu-order-button" href="order-online/sides/salad.html" aria-label="Order Seasonal Salad Online">Order Online</a>
+                </article>
+              </li>
               <li><img src="photos/food/sides.png" alt="Sides"></li>
               <li><img src="photos/food/drinks.png" alt="Drinks"></li>
             </ul>
           </article>
         </section>
-        <section class="about">
+        <section id="about" class="about">
           <article id="about-content">
             <section id="about-image">
               <section id="about-text">
@@ -114,7 +181,8 @@
         <section class="footer-right">
           <h4>Mon — Sat:<br>
           11AM — 5:30PM<br>
-          120 Dell St. Syracuse, NY</h4>
+          120 Dell St. Syracuse, NY<br>
+          <a class="footer-order-link" href="https://order.dellstdeli.com/" target="_blank" rel="noopener">Order Online</a></h4>
         </section>
 
       </footer>

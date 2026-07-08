@@ -1,0 +1,209 @@
+/* Order Online Product Template
+   Template-specific styles for individual sandwich order pages.
+   Shared site styles remain in ../style.css.
+
+   Text-first version: no product image/media column. */
+
+.product-page {
+  width: min(95%, 1240px);
+  margin: 12px auto;
+  padding: clamp(1rem, 2.5vw, 2rem);
+  background: var(--menu);
+  border: 1px solid var(--gold);
+  border-radius: 16px;
+}
+
+.product-copy {
+  width: 100%;
+  max-width: 1180px;
+  margin: 0 auto;
+}
+
+.product-eyebrow {
+  font-family: 'League Spartan', Georgia, serif;
+  color: var(--gold);
+  font-size: 0.95rem;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  margin: 0 0 0.4rem;
+  text-transform: uppercase;
+}
+
+.product-copy h1 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(2.4rem, 6vw, 5rem);
+  line-height: 0.95;
+  margin: 0;
+  color: var(--text);
+}
+
+.product-copy .lead {
+  max-width: 850px;
+  margin: 0.75rem 0 1rem;
+  color: var(--muted);
+  font-family: 'Fraunces', serif;
+  font-size: clamp(1rem, 1.8vw, 1.25rem);
+  font-weight: 300;
+  line-height: 1.35;
+}
+
+.product-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+  margin: 1rem 0 1.35rem;
+}
+
+.product-pill {
+  border: 1px solid var(--gold);
+  border-radius: 999px;
+  color: var(--text);
+  font-family: 'League Spartan', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 0.45rem 0.75rem;
+  text-transform: uppercase;
+}
+
+.included-card,
+.build-card {
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  padding: clamp(1rem, 2vw, 1.35rem);
+  background: #161616;
+}
+
+.included-card {
+  margin: 0 0 1rem;
+}
+
+.build-card h2,
+.included-card h2 {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+  line-height: 1;
+  margin: 0 0 1rem;
+  color: var(--text);
+}
+
+.included-list {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.75rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.included-list li {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.85rem;
+  color: var(--text);
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+  background: #0d0d0d;
+}
+
+.included-list strong {
+  display: block;
+  color: var(--gold);
+  font-family: 'League Spartan', Georgia, serif;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.order-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.9rem;
+}
+
+.form-field {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.form-field label,
+.choice-group legend {
+  color: var(--gold);
+  font-family: 'League Spartan', Georgia, serif;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.form-field select,
+.form-field input,
+.form-field textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #0d0d0d;
+  color: var(--text);
+  font: inherit;
+  padding: 0.75rem 0.85rem;
+}
+
+.form-field textarea {
+  min-height: 110px;
+  resize: vertical;
+}
+
+.choice-group {
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 0.9rem;
+}
+
+.choice-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.45rem 0.85rem;
+  margin-top: 0.55rem;
+}
+
+.choice-list label {
+  color: var(--text);
+  font-family: 'Fraunces', serif;
+  font-weight: 300;
+}
+
+.choice-list input {
+  margin-right: 0.35rem;
+  accent-color: var(--gold);
+}
+
+.form-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.form-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .included-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 620px) {
+  .form-grid,
+  .choice-list,
+  .included-list {
+    grid-template-columns: 1fr;
+  }
+}
